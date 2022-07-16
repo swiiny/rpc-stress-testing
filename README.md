@@ -19,8 +19,8 @@ function startWebsocket() {
 
 ### 1. Clone the repo
 ```
-git clone https://github.com/JeremyTheintz/node-stress-testing
-cd ./node-stress-testing
+git clone https://github.com/JeremyTheintz/rpc-stress-testing
+cd ./rpc-stress-testing
 ```
 
 ### 2. Start n instances on your RPC

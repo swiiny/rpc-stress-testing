@@ -1,5 +1,5 @@
 {
-  "name": "node-stress-testing",
+  "name": "rpc-stress-testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
