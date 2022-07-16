@@ -1,0 +1,14 @@
+{
+  "name": "node-stress-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jeremy Theintz",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.6.9"
+  }
+}
