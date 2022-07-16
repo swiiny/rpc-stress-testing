@@ -1,11 +1,15 @@
 #!/bin/sh
 
-# iteration count from first argument
+# Instances to start
 count=$1;
 
-# provider url
+# Provider url
 provider_url=$2;
 
+# Create .env file
+echo "PROVIDER_URL=$provider_url" > .env
+
+# Create docker-compose.yml file content
 buildComposeYaml() {
   cat <<HEADER
 version: '3.0'
@@ -26,12 +30,10 @@ BLOCK
   done
 }
 
-echo "PROVIDER_URL=$provider_url" > .env
-
-# build image docker from Dockerfile
+# Build image docker from Dockerfile
 docker build -t server-instance .
 
-# Build the compose file
+# Add content to the docker-compose file
 buildComposeYaml > docker-compose.yml
 
 # Run the compose file
