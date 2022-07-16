@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# Run the compose file
+# Turn off the container with the n instances
 docker-compose down -v
