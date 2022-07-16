@@ -1,4 +1,4 @@
-# Node stress testing
+# Node stress testing :chart_with_upwards_trend:
 ## Introduction
 This project will help you stress testing your node by creating **n** users subscribed to receive new blocks then fetch block with transactions using [ethers](https://docs.ethers.io/v5/) library
 
