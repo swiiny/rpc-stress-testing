@@ -11,11 +11,11 @@ function startWebsocket() {
 	});
 }
 ```
-## Working configuration
+## Working configuration :white_check_mark:
 - Docker engine v20.10.17
 - Docker compose v2.6.1
 
-## Setup
+## Setup :hammer:
 
 ### 1. Clone the repo
 ```
@@ -32,5 +32,5 @@ cd ./node-stress-testing
 ### 4. Stop all instances
 `sh stop.sh`
 
-## Warning
+## Warning :rotating_light:
 Running too much instance will consume a lot of RAM and CPU, use at your own risk
