@@ -23,7 +23,7 @@ git clone https://github.com/JeremyTheintz/rpc-stress-testing
 cd ./rpc-stress-testing
 ```
 
-### 2. Start n instances on your RPC
+### 2. Start n instances connected to your RPC
 `sh start.sh n your_rpc_url`
 
 #### Example of command to run 100 instances simultaneously 
