@@ -25,12 +25,14 @@ cd ./rpc-stress-testing
 
 ### 2. Start n instances connected to your RPC
 `sh start.sh n your_rpc_url`
+> Not on mac ? then replace `sh` with `bash` from the shebang line of the script
 
 #### Example of command to run 100 instances simultaneously 
 `sh start.sh 100 wss://your_rpc_url`
 
 ### 4. Stop all instances
 `sh stop.sh`
+> Not on mac ? then replace `sh` with `bash` from the shebang line of the script
 
 ## Warning :rotating_light:
 Running too many instances will consume a lot of RAM and CPU, use at your own risk
