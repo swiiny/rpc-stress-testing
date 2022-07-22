@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # Instances to start
-count=$1;
+count=$1
 
 # Provider url
-provider_url=$2;
+provider_url=$2
 
 # Create .env file
-echo "PROVIDER_URL=$provider_url" > .env
+echo "PROVIDER_URL=$provider_url" >.env
 
 # Create docker-compose.yml file content
 buildComposeYaml() {
@@ -15,8 +15,19 @@ buildComposeYaml() {
 version: '3.0'
 services:
 HEADER
-  for ((i=1; i < $count + 1; i++)); do
-    cat <<BLOCK
+  for ((i = 1; i < $count + 1; i++)); do
+    if [ $i -eq 1 ]; then
+      cat <<BLOCK
+  s$i:
+    container_name: s$i
+    image: server-instance
+    command: npm run start
+    restart: unless-stopped
+    env_file:
+        - .env
+BLOCK
+    else
+      cat <<BLOCK
   s$i:
     container_name: s$i
     image: server-instance
@@ -27,6 +38,7 @@ HEADER
     depends_on:
       - s$((i - 1))
 BLOCK
+    fi
   done
 }
 
@@ -34,7 +46,7 @@ BLOCK
 docker build -t server-instance .
 
 # Add content to the docker-compose file
-buildComposeYaml > docker-compose.yml
+buildComposeYaml >docker-compose.yml
 
 # Run the compose file
 docker-compose up -d
