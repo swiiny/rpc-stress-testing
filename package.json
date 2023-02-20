@@ -9,6 +9,6 @@
   "author": "Jeremy Theintz",
   "license": "ISC",
   "dependencies": {
-    "ethers": "^5.6.9"
+    "ethers": "^6.0.5"
   }
 }
